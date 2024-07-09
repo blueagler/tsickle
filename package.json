@@ -1,6 +1,6 @@
 {
-  "name": "tsickle",
-  "version": "0.47.0",
+  "name": "@blueagle/tsickle",
+  "version": "0.47.1",
   "description": "Transpile TypeScript code to JavaScript with Closure annotations.",
   "main": "out/src/tsickle.js",
   "typings": "out/src/tsickle.d.ts",
