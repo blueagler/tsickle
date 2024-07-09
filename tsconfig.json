@@ -1,23 +1,24 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "moduleResolution": "node",
     "lib": [
       "ESNext"
     ],
     "declaration": true,
     "types": [
-      "node"
+      "node",
     ],
-    "sourceMap": true,
     "target": "ESNext",
     "strict": true,
     "outDir": "out",
-    "paths": {"tsickle": ["./src/tsickle.ts"]},
+    "paths": {
+      "tsickle": [
+        "./src/tsickle.ts"
+      ]
+    },
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext"
   },
   "include": [
-    "src/*.ts",
-    "test/*.ts",
-    "demo/*.ts"
-  ] 
+    "src/*.ts"
+  ]
 }
