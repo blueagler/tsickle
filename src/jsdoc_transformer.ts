@@ -1176,7 +1176,9 @@ export function jsdocTransformer(
         } else if (ts.isNamedExports(exportDecl.exportClause)) {
           // export {a, b, c} from 'abc';
           for (const exp of exportDecl.exportClause.elements) {
-            const exportedName = transformerUtil.getIdentifierText(exp.name);
+            const exportedName = ts.isIdentifier(exp.name) 
+                ? transformerUtil.getIdentifierText(exp.name) 
+                : exp.name.text;
             typesToExport.push(
                 [exportedName, moduleTypeTranslator.mustGetSymbolAtLocation(exp.name)]);
           }

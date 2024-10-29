@@ -493,10 +493,13 @@ export function merge(tags: Tag[]): Tag {
     if (tag.restParam) restParam = true;
   }
 
+  if(tagNames.size === 0) {
+    throw new Error(`cannot merge empty tags: ${JSON.stringify(tags)}`);
+  }
   if (tagNames.size !== 1) {
     throw new Error(`cannot merge differing tags: ${JSON.stringify(tags)}`);
   }
-  const tagName = tagNames.values().next().value;
+  const tagName = tagNames.values().next().value as string;
   const parameterName =
       parameterNames.size > 0 ? Array.from(parameterNames).join('_or_') : undefined;
   const type = types.size > 0 ? Array.from(types).join('|') : undefined;

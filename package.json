@@ -2,23 +2,27 @@
   "name": "@blueagle/tsickle",
   "version": "0.47.1",
   "description": "Transpile TypeScript code to JavaScript with Closure annotations.",
-  "main": "out/src/tsickle.js",
-  "typings": "out/src/tsickle.d.ts",
+  "type": "module",
+  "typings": "./out/tsickle.d.ts",
+  "main": "./out/tsickle.js",
+  "exports": {
+    ".": "./out/tsickle.js"
+  },
   "files": [
     "out/src/*"
   ],
   "devDependencies": {
     "@types/diff-match-patch": "^1.0.36",
     "@types/glob": "8.1.0",
-    "@types/node": "^20.14.10",
+    "@types/node": "^22.8.2",
     "@types/source-map-support": "^0.5.10",
     "diff-match-patch": "^1.0.5",
     "glob": "11.0.0",
-    "google-closure-compiler": "^20240708.0.0-nightly",
-    "source-map": "^0.7.4",
+    "google-closure-compiler": "^20241028.0.0-nightly",
+    "source-map": "^0.8.0-beta.0",
     "source-map-support": "^0.5.21",
-    "tslib": "^2.6.3",
-    "typescript": "^5.4.5"
+    "tslib": "^2.8.0",
+    "typescript": "^5.7.0-beta"
   },
   "scripts": {
     "build": "tsc",

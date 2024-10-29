@@ -666,7 +666,7 @@ export class TypeTranslator {
     // Remove duplicates to produce types that read better.
     const parts = new Set(types.map(t => this.translate(t)));
     // If it's a single element set, return the single member.
-    if (parts.size === 1) return parts.values().next().value;
+    if (parts.size === 1) return parts.values().next().value as string;
     return `(${Array.from(parts.values()).join('|')})`;
   }
 

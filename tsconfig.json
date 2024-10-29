@@ -15,8 +15,7 @@
         "./src/tsickle.ts"
       ]
     },
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext"
+    "moduleResolution": "Bundler"
   },
   "include": [
     "src/*.ts"
